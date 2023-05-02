@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+	int attack;
+	int enemyHP = 30;
+
+	printf("주인공의 공격력을 입력하세요. : ");
+	scanf("%d", &attack);
+	printf("주인공이 공격력은 %d입니다.\n",attack);
+
+	if(enemyHP==attack)
+	{
+	printf("주인공의 회심의 일격으로 %d의 데미지를 입혔습니다.\n\n",attack);
+	printf("적의 남은 HP : %d\n\n",enemyHP-attack);
+	printf("적을 처치하였습니다!\n\n캐리 ㅋ \n\n");
+	}
+	else if(enemyHP<attack)
+	{
+	printf("주인공의 회심의 일격으로 %d의 데미지를 입혔습니다.\n\n",attack);
+	printf("적의 남은 HP 0\n\n");
+	printf("적을 처치하였습니다!\n\n캐리 ㅋ \n\n");
+	}
+	else if(enemyHP>attack)
+	{
+	printf("주인공의 회심의 일격으로 %d의 데미지를 입혔습니다.\n\n",attack);
+	printf("적의 남은 HP %d\n\n",enemyHP-attack);
+	printf("적에게 당했습니다!\n\n아 팀차이 gg \n\n");
+	}
+}
