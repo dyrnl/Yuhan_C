@@ -39,7 +39,7 @@ int print_title()
 			writeStringToBuffer("202327021", 11 , 14); 				
 		}
 
-		writeStringToBuffer("Dino Game", 11 , 3);
+		writeStringToBuffer("Avoiding Lee Eunseok", 5 , 3);
 		writeStringToBuffer("1. Start", 11 , 5);
 		writeStringToBuffer("2. Help", 11 , 6);
 		writeStringToBuffer("3. Exit", 11 , 7);
@@ -137,7 +137,7 @@ int main()
 	int game_states = 4;
 	while(game_states)
 	{		
-		if(game_states == 4)
+		if(game_states == 1)
 		{
 			system("cls");
 			print_title();
@@ -153,6 +153,12 @@ int main()
 		{
 			system("cls");
 			print_exit();
+			scanf("%d", &game_states);
+		}
+		else if(game_states == 4)
+		{
+			system("cls");
+			print_title();
 			scanf("%d", &game_states);
 		}
 		else if(game_states == 0)
