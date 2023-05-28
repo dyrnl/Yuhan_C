@@ -11,6 +11,7 @@ void GotoXY(int x, int y);
 
 void CursorView();
 
+
 int print_loading()
 {
 
@@ -51,38 +52,9 @@ int print_loading()
 
 int print_play()
 {
-	int i = 0;
-
-		while(i < 465)
-		{
-			int x = i % 31;
-			int y = i / 31;
-	
-			if(i == 0 || i == 29 || i == 434 || i == 463)
-			{
-				map[i] = '@';
-			}
-			else if(x == 30)
-			{
-				map[i] = '\n';
-			}
-			else if(x == 0 || x == 29)
-			{
-				map[i] = '|';
-			}
-			else if(y == 0 || y == 14)
-			{
-				map[i] = '-';
-			}
-			else
-			{
-				map[i] = ' ';
-			}
-			i++;		
-		}	
 		writeStringToBuffer("202327021", 11 , 14); 	
 		writeStringToBuffer("Avoiding Lee Eunseok", 5 , 0);
-		map[464]='\0';	
+		map[464]='\0';
 }
 int print_title()
 {
@@ -213,7 +185,7 @@ int print_exit()
 int main()
 {
 	system("cls");
-	CursorView(0);
+	CursorView();
 	int game_states = 4;
 	while(game_states)
 	{		
@@ -283,8 +255,8 @@ void GotoXY(int x, int y)
 }
 void CursorView()
 {
-    CONSOLE_CURSOR_INFO cursorInfo = { 0, }; //CONSOLE_CURSOR_INFO 구조체 변수인 cursorInfo를 선언하고 초기화하는 코드입니다.
-    cursorInfo.dwSize = 1; //커서 굵기 (1 ~ 100)
-    cursorInfo.bVisible = FALSE; //커서 Visible TRUE(보임) FALSE(숨김)
-    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
+	CONSOLE_CURSOR_INFO cursorInfo = { 0, }; //CONSOLE_CURSOR_INFO 구조체 변수인 cursorInfo를 선언하고 초기화하는 코드입니다.
+	cursorInfo.dwSize = 1; //커서 굵기 (1 ~ 100)
+	cursorInfo.bVisible = FALSE; //커서 Visible TRUE(보임) FALSE(숨김)
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
 }
