@@ -1,0 +1,4 @@
+﻿  main.c
+D:\Yuhan_C\c 기말과제\Project\Project\main.c(90,8): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Yuhan_C\c 기말과제\Project\Project\main.c(291,20): warning C4244: '함수': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Project.vcxproj -> D:\Yuhan_C\c 기말과제\Project\x64\Debug\Project.exe
