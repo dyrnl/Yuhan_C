@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <Windows.h>
 #include <time.h>
+#include <stdlib.h>
 #define MAX_PROJECTILES 4
 
 char map[496]; /* 가로 30 + 1(개행문자) 세로 15 */
@@ -246,7 +246,7 @@ int move_charandscore()
 		printf("□");
 
 		// 충돌 체크
-		if (playerX == projectile.x && playerY == projectile.y || playerX == projectile2.x && playerY == projectile2.y  
+		if (playerX == projectile.x && playerY == projectile.y || playerX == projectile2.x && playerY == projectile2.y
 			|| playerX == projectile3.x && playerY == projectile3.y || playerX == projectile4.x && playerY == projectile4.y)
 		{
 			system("cls");// 충돌 시 게임 종료
@@ -332,6 +332,10 @@ void print_exit()
 	writeStringToBuffer("Are you sure you want to", 3, 5);
 	writeStringToBuffer("exit the game?", 8, 6);
 	writeStringToBuffer("please press 0", 8, 7);
+	writeStringToBuffer("or", 14, 8);
+	writeStringToBuffer("If you want to go back", 4, 9);
+	writeStringToBuffer("to the title screen", 5, 10);
+	writeStringToBuffer("please press 4", 8, 11);
 }
 
 int main()
