@@ -1,8 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <Windows.h>
 #include <time.h>
-#include <stdlib.h>
 #define MAX_PROJECTILES 4
 
 char map[496]; /* 가로 30 + 1(개행문자) 세로 15 */
@@ -227,23 +227,23 @@ int move_charandscore()
 
 		printf("%s", map);
 		GotoXY(playerX, playerY);
-		printf("■");
+		printf("\033[34m■\033[0m");
 
 		GotoXY(18, 15);
 		printf("Score : %d", score);
 
 		// 투사체 출력
 		GotoXY(projectile.x, projectile.y);
-		printf("●");
+		printf("\033[31m●\033[0m");
 
 		GotoXY(projectile2.x, projectile2.y);
-		printf("○");
+		printf("\033[31m○\033[0m");
 
 		GotoXY(projectile3.x, projectile3.y);
-		printf("◎");
+		printf("\033[31m◎\033[0m");
 
 		GotoXY(projectile4.x, projectile4.y);
-		printf("□");
+		printf("\033[31m□\033[0m");
 
 		// 충돌 체크
 		if (playerX == projectile.x && playerY == projectile.y || playerX == projectile2.x && playerY == projectile2.y
